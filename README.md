@@ -2,6 +2,10 @@
 
 A simple, accessible web app that helps elderly people book cabs without confusion. Family members can create easy booking links with pre-filled pickup and destination locations.
 
+[![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-black?logo=vercel)](https://cab-easy.vercel.app/)
+
+**🌐 Live:** [https://cab-easy.vercel.app/](https://cab-easy.vercel.app/)
+
 ## ✨ Features
 
 - **📍 Easy Location Selection** - Map-based or search-based location picker (India only)
@@ -53,134 +57,15 @@ npm run preview
 
 ---
 
-# 🚀 Deployment Guide
+## 🌐 Live App
 
-## Option 1: Vercel (Recommended - Free)
+This project is deployed on **Vercel**. Try it here:
 
-### Step 1: Push to GitHub
-```bash
-# Initialize git (if not already)
-git init
-git add .
-git commit -m "Initial commit - CabEasy"
+**[https://cab-easy.vercel.app/](https://cab-easy.vercel.app/)**
 
-# Create repo on GitHub, then:
-git remote add origin https://github.com/YOUR_USERNAME/cab-easy.git
-git branch -M main
-git push -u origin main
-```
+Please use it and let me know how you like it.
 
-### Step 2: Deploy on Vercel
-1. Go to [vercel.com](https://vercel.com) and sign up with GitHub
-2. Click **"Add New Project"**
-3. Import your `cab-easy` repository
-4. Vercel auto-detects Vite - just click **"Deploy"**
-5. Wait ~1 minute, get your URL: `https://cab-easy.vercel.app`
-
-### Custom Domain (Optional)
-1. In Vercel dashboard → Settings → Domains
-2. Add your domain (e.g., `cabeasy.yourdomain.com`)
-3. Update DNS as instructed
-
----
-
-## Option 2: Netlify (Free)
-
-### Step 1: Build the project
-```bash
-npm run build
-```
-
-### Step 2: Deploy
-1. Go to [netlify.com](https://netlify.com) and sign up
-2. Drag & drop the `dist` folder to Netlify
-3. Get instant URL: `https://random-name.netlify.app`
-
-### Or via CLI:
-```bash
-# Install Netlify CLI
-npm install -g netlify-cli
-
-# Login
-netlify login
-
-# Deploy
-netlify deploy --prod --dir=dist
-```
-
----
-
-## Option 3: GitHub Pages (Free)
-
-### Step 1: Update vite.config.js
-```javascript
-export default defineConfig({
-  plugins: [react()],
-  base: '/cab-easy/', // Add this line (your repo name)
-})
-```
-
-### Step 2: Install gh-pages
-```bash
-npm install -D gh-pages
-```
-
-### Step 3: Add deploy script to package.json
-```json
-{
-  "scripts": {
-    "deploy": "npm run build && gh-pages -d dist"
-  }
-}
-```
-
-### Step 4: Deploy
-```bash
-npm run deploy
-```
-
-Your app will be at: `https://YOUR_USERNAME.github.io/cab-easy/`
-
----
-
-## Option 4: Self-Hosted (VPS/Server)
-
-### Using Nginx
-```bash
-# Build
-npm run build
-
-# Copy dist folder to server
-scp -r dist/* user@your-server:/var/www/cabeasy/
-
-# Nginx config (/etc/nginx/sites-available/cabeasy)
-server {
-    listen 80;
-    server_name cabeasy.yourdomain.com;
-    root /var/www/cabeasy;
-    index index.html;
-    
-    location / {
-        try_files $uri $uri/ /index.html;
-    }
-}
-```
-
----
-
-## 🌐 After Deployment
-
-Once deployed, share your URL with family:
-
-1. **Direct Link**: `https://your-app.vercel.app`
-2. **With Pre-filled Trip**: 
-   ```
-   https://your-app.vercel.app/?plat=28.6139&plng=77.209&paddr=Home&dlat=28.5355&dlng=77.391&daddr=Hospital
-   ```
-
-### Create Shortcuts
-- **Android**: Open in Chrome → Menu → "Add to Home Screen"
-- **iOS**: Open in Safari → Share → "Add to Home Screen"
+**Tip:** You can add it to your home screen for quick access — on Android (Chrome → Add to Home Screen) or iOS (Safari → Share → Add to Home Screen).
 
 ---
 
