@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Analytics } from '@vercel/analytics/react'
 import LocationPicker from './components/LocationPicker'
 import CabLinks from './components/CabLinks'
 import ShareModal from './components/ShareModal'
@@ -39,6 +40,7 @@ function App() {
         >
           ⚙️ Edit Trip
         </button>
+        <Analytics />
       </div>
     )
   }
@@ -143,6 +145,8 @@ function App() {
           © {new Date().getFullYear()} CabEasy. Open source under MIT License.
         </p>
       </footer>
+
+      <Analytics />
     </div>
   )
 }
